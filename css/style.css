@@ -10,7 +10,6 @@
     --block-gap: 20px;
 }
 
-/* Базовая модель размеров помогает избежать случайного переполнения */
 * {
     box-sizing: border-box;
 }
@@ -41,7 +40,6 @@ body {
     max-width: 100%;
 }
 
-/* Общий стиль основных структурных блоков */
 header,
 main,
 aside,
@@ -98,7 +96,6 @@ img {
     border-radius: 6px;
 }
 
-/* Навигационное меню: Flexbox выстраивает ссылки в строку и разрешает перенос */
 .site-nav {
     padding: 10px 16px;
 }
@@ -125,7 +122,6 @@ img {
     text-align: center;
 }
 
-/* Flexbox-контейнер карточек объектов: три карточки в строке на широком экране */
 .objects-container {
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +157,6 @@ img {
     line-height: 1.2;
 }
 
-/* CSS Grid-контейнер: три равных столбца для дашборда */
 .facts-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -203,13 +198,11 @@ img {
     box-shadow: 0 0 14px rgba(255, 215, 0, 0.12);
 }
 
-/* Пример static-позиционирования: footer остаётся в обычном потоке документа */
 footer {
     position: static;
     text-align: center;
 }
 
-/* Два фоновых слоя звёзд, созданных псевдоэлементами */
 .stars-container::before,
 .stars-container::after {
     content: "";
@@ -245,7 +238,7 @@ footer {
     animation: twinkle-bg-2 4s ease-in-out infinite 1.5s;
 }
 
-/* Отдельные звёзды: абсолютное позиционирование относительно stars-container */
+
 .star {
     position: absolute;
     z-index: 1;
@@ -280,7 +273,7 @@ footer {
     50% { opacity: 0.15; transform: scale(1.01) translate(-0.5px, -0.5px); }
 }
 
-/* При наведении на «Проекты» звёздный фон становится тусклее */
+
 .stars-container:has(.projects-section:hover) .star,
 .stars-container:has(.projects-section:hover)::before,
 .stars-container:has(.projects-section:hover)::after {
@@ -294,7 +287,7 @@ section:hover {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
-/* Ссылки и состояния :hover, :visited, :focus, :active */
+
 .space-link {
     display: inline-block;
     color: var(--accent-color);
@@ -324,7 +317,7 @@ section:hover {
     text-decoration: none;
 }
 
-/* Форма и видимый фокус для управления с клавиатуры */
+
 form {
     max-width: 520px;
 }
@@ -395,7 +388,6 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Адаптивность: планшеты — две карточки в ряд и две колонки Grid */
 @media (max-width: 900px) {
     body {
         padding: 14px;
@@ -423,7 +415,6 @@ button:active {
     }
 }
 
-/* Адаптивность: телефоны — одна карточка / колонка, меню переносится */
 @media (max-width: 600px) {
     body {
         padding: 8px;
@@ -472,7 +463,6 @@ button:active {
     }
 }
 
-/* Уважаем системную настройку уменьшения анимации */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
